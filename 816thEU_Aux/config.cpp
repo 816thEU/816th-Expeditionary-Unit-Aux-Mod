@@ -241,6 +241,7 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Infantry_1.paa"
 		};
 	};
+// if you see this you get a demotion
 	class 816th_Helmet_Infantry_2: SWLB_clone_P2_helmet
 	{
 		dlc="816th_EU";
