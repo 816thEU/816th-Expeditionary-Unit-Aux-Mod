@@ -138,6 +138,8 @@ class CfgWeapons
 {
 	class ls_gar_phase2_uniform;
 	class ls_gar_phase2_helmet;
+	class lsd_gar_arc_helmet;
+	class ls_gar_phase2Pilot_helmet;
 	class SWLB_clone_ccVisor;
 	class SWLB_clone_mcVisor;
 	class SWLB_clone_nvg;
@@ -349,14 +351,13 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_ARC_Y_1.paa"
 		};
 	};
-	class 816th_ARC_Helmet_Spades: SWLB_clone_P15_helmet
+	class 816th_ARC_Helmet_Spades: lsd_gar_arc_helmet
 	{
 		dlc="816th_EU";
 		author="Photon";
 		scope=2;
 		scopeArsenal=2;
 		displayName="816th ARC Helmet Spades";
-		model="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -365,19 +366,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"816thEU_Aux\data\816th_Helmet_Arc_Spades.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			uniformModel="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
+			"816thEU_Aux\data\816th_Helmet_Arc_Spades.paa",
+			"lsd_armor_bluefor\helmet\gar\arc\data\visor_co.paa"
 		};
 	};
-	class 816th_ARC_Helmet_Diamonds: SWLB_clone_P15_helmet
+	class 816th_ARC_Helmet_Diamonds: lsd_gar_arc_helmet
 	{
 		dlc="816th_EU";
 		author="Aussie";
@@ -393,19 +386,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"816thEU_Aux\data\816th_Helmet_Arc_Diamonds.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			uniformModel="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
+			"816thEU_Aux\data\816th_Helmet_Arc_Diamonds.paa",
+			"lsd_armor_bluefor\helmet\gar\arc\data\visor_co.paa"
 		};
 	};
-	class 816th_ARC_Helmet_Hearts: SWLB_clone_P15_helmet
+	class 816th_ARC_Helmet_Hearts: lsd_gar_arc_helmet
 	{
 		dlc="816th_EU";
 		author="Aussie";
@@ -421,16 +406,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"816thEU_Aux\data\816th_Helmet_Arc_Hearts.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			uniformModel="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
+			"816thEU_Aux\data\816th_Helmet_Arc_Hearts.paa",
+			"lsd_armor_bluefor\helmet\gar\arc\data\visor_co.paa"
 		};
 	};
 	class 816th_Helmet_ARF_1: SWLB_clone_ARF_P1_helmet
@@ -545,7 +522,7 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_ENG_1.paa"
 		};
 	};
-	class 816th_Helmet_Pilot_1: SWLB_clone_pilot_P2_helmet
+	class 816th_Helmet_Pilot_1: ls_gar_phase2Pilot_helmet
 	{
 		dlc="816th_EU";
 		author="Photon";
@@ -563,17 +540,8 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Pilot_1.paa",
 			"ls_armor_bluefor\helmet\gar\phase2pilot\data\visor_co.paa"
 		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			uniformModel="ls_armor_bluefor\helmet\gar\phase2Pilot\ls_gar_phase2Pilot_helmet.p3d";
-		};
 	};
-	class 816th_Custom_Helmet_Mako: SWLB_clone_P15_helmet
+	class 816th_Custom_Helmet_Mako: lsd_gar_arc_helmet
 	{
 		dlc="816th_EU";
 		author="Aussie";
@@ -591,15 +559,6 @@ class CfgWeapons
 		{
 			"816thEU_Aux\data\816th_Helmet_Custom_Mako.paa",
 			"816thEU_Aux\data\816th_Helmet_Custom_visor_Mako.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			uniformModel="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
 		};
 	};
 	class 816th_Custom_Helmet_Photon: SWLB_clone_P2_helmet
