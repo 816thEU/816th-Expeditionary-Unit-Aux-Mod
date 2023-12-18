@@ -241,7 +241,6 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Infantry_1.paa"
 		};
 	};
-// if you see this you get a demotion
 	class 816th_Helmet_Infantry_2: SWLB_clone_P2_helmet
 	{
 		dlc="816th_EU";
@@ -360,6 +359,30 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"816thEU_Aux\data\816th_Helmet_Arc_Spades.paa"
+		};
+	};
+	class 816th_ARC_Helmet_Diamonds: SWLB_clone_P15_helmet
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Helmet Diamonds";
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_Aux\data\816th_Helmet_Arc_Diamonds.paa"
+		};
+	};
+	class 816th_ARC_Helmet_Hearts: SWLB_clone_P15_helmet
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Helmet Hearts";
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_Aux\data\816th_Helmet_Arc_Hearts.paa"
 		};
 	};
 	class 816th_Helmet_ARF_1: SWLB_clone_ARF_P1_helmet
@@ -490,13 +513,14 @@ class CfgWeapons
 	class 816th_Custom_Helmet_Mako: SWLB_clone_P15_helmet
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayName="816th Custom Helmet (Mako)";
 		hiddenSelectionsTextures[]=
 		{
 			"816thEU_Aux\data\816th_Helmet_Custom_Mako.paa"
+			"816thEU_Aux\data\816th_Helmet_Custom_visor_Mako.paa"
 		};
 	};
 	class 816th_Custom_Helmet_Photon: SWLB_clone_P2_helmet
@@ -511,16 +535,16 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Custom_Photon.paa"
 		};
 	};
-	class 816th_Custom_Helmet_Aussie: SWLB_clone_P2_helmet
+	class 816th_Custom_Helmet_Acorn: SWLB_clone_P1_helmet
 	{
 		dlc="816th_EU";
 		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
-		displayName="816th Custom Helmet (Aussie)";
+		displayName="816th Custom Helmet (Acorn)";
 		hiddenSelectionsTextures[]=
 		{
-			"816thEU_Aux\data\816th_Helmet_Custom_Aussie.paa"
+			"816thEU_Aux\data\816th_Helmet_Custom_Acorn.paa"
 		};
 	};
 	class 816th_RFL_Uniform_1: SWLB_clone_uniform
@@ -703,6 +727,36 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class 816th_ARC_Uniform_Diamonds: SWLB_clone_uniform
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Uniform Diamonds";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="816th_ARC_Trooper_Diamonds";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class 816th_ARC_Uniform_Hearts: SWLB_clone_uniform
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Uniform Hearts";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="816th_ARC_Trooper_Hearts";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
 	class 816th_ARF_Uniform_1: SWLB_clone_uniform
 	{
 		dlc="816th_EU";
@@ -790,21 +844,6 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="816th_Custom_Trooper_Photon";
-			containerClass="Supply150";
-			mass=40;
-		};
-	};
-	class 816th_Custom_Uniform_Aussie: SWLB_clone_uniform
-	{
-		dlc="816th_EU";
-		author="Aussie";
-		scope=2;
-		scopeArsenal=2;
-		displayName="816th Custom Uniform (Aussie)";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="816th_Custom_Trooper_Aussie";
 			containerClass="Supply150";
 			mass=40;
 		};
@@ -911,6 +950,189 @@ class CfgWeapons
 					passThrough=0.00089999998;
 				};
 			};
+		};
+	};
+	class 816th_Vest_ARC_Diamonds: SWLB_clone_officer_armor
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Trooper Vest Diamonds";
+		picture="\SWLB_clones\data\ui\icon_SWLB_clone_arc_armor_ca.paa";
+		model="\SWLB_clones\SWLB_clone_arc_armor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_AUX\data\816th_vest_arc_plates_diamonds.paa",
+			"816thEU_AUX\data\816th_vest_arc_diamonds.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\SWLB_clones\SWLB_clone_arc_armor.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=100;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=14;
+					PassThrough=0.00089999998;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=14;
+					passThrough=0.00089999998;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=4;
+					passThrough=0.00089999998;
+				};
+			};
+		};
+	};
+	class 816th_Vest_ARC_Hearts: SWLB_clone_officer_armor
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th ARC Trooper Vest Hearts";
+		picture="\SWLB_clones\data\ui\icon_SWLB_clone_arc_armor_ca.paa";
+		model="\SWLB_clones\SWLB_clone_arc_armor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_AUX\data\816th_vest_arc_plates_hearts.paa",
+			"816thEU_AUX\data\816th_vest_arc_hearts.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\SWLB_clones\SWLB_clone_arc_armor.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=100;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=14;
+					PassThrough=0.00089999998;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=14;
+					passThrough=0.00089999998;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=4;
+					passThrough=0.00089999998;
+				};
+			};
+		};
+	};
+	class ls_nvg_base;
+	class lsd_gar_standard_nvg: ls_nvg_base
+	{
+		class ItemInfo;
+	};
+	class 816th_NVG_Chip: lsd_gar_standard_nvg
+	{
+		dlc="816th_EU";
+		author="Photon";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th Clone NVG Chip";
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0};
+		model="A3\weapons_F\ammo\mag_univ.p3d";
+		modelOptics="BNA_KC_Gear\Data\Models\empty_model.p3d";
+		hiddenSelections[]={};
+		hiddenSelectionsTextures[]={};
+		picture="\MRC\JLTS\Core_mod\data\ui\nvg_chip_1_ui_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[]={};
+			uniformModel="BNA_KC_Gear\Data\Models\empty_model.p3d";
+			modelOff="BNA_KC_Gear\Data\Models\empty_model.p3d";
+		};
+	};
+	class 816th_NVG_Visor: 816th_NVG_Chip
+	{
+		displayName="816th Clone P2 NVG Visor";
+		model="\lsd_equipment_bluefor\nvg\gar\visor\lsd_gar_visor_nvg_on.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_AUX\data\816th_nvg_visor.paa"
+		};
+		picture="\lsd_equipment_bluefor\nvg\gar\_ui\icon_SWLB_clone_nvg_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			uniformModel="lsd_equipment_bluefor\nvg\gar\visor\lsd_gar_visor_nvg_on.p3d";
+			modelOff="lsd_equipment_bluefor\nvg\gar\visor\lsd_gar_visor_nvg_off.p3d";
+		};
+	};
+	class 816th_NVG_Rangefinder: 816th_NVG_Chip
+	{
+		displayName="816th Clone P2 Rangefinder";
+		model="lsd_equipment_bluefor\nvg\gar\lsd_gar_rangefinder_nvg_on.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_AUX\data\816th_nvg_rangefinder.paa"
+		};
+		picture="SWLB_clones\data\ui\icon_SWLB_clone_rangefinder_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			uniformModel="lsd_equipment_bluefor\nvg\gar\rangefinder\lsd_gar_rangefinder_nvg_on.p3d";
+			modelOff="lsd_equipment_bluefor\nvg\gar\rangefinder\lsd_gar_rangefinder_nvg_off.p3d";
 		};
 	};
 };
@@ -1301,6 +1523,80 @@ class CfgVehicles
 			"TFAR_microdagr"
 		};
 	};
+	class 816th_ARC_Trooper_Diamonds: SWLB_clone_arc_base_P2
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeCurator=2;
+		displayName="816th ARC Trooper Diamonds";
+		faction="816th_EU_Faction";
+		backpack="";
+		editorSubcategory="816th_ARC";
+		uniformclass="816th_ARC_Trooper_Diamonds";
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_Aux\data\816th_uniform_arc_diamonds_upper.paa",
+			"816thEU_Aux\data\816th_uniform_arc_diamonds_lower.paa"
+		};
+		linkedItems[]=
+		{
+			"816th_ARC_Helmet_Diamonds",
+			"816th_ARC_Uniform_Diamonds",
+			"816th_Vest_ARC_Diamonds",
+			"ItemMap",
+			"SWLB_comlink",
+			"ItemCompass",
+			"TFAR_microdagr"
+		};
+		respawnLinkedItems[]=
+		{
+			"816th_ARC_Helmet_Diamonds",
+			"816th_ARC_Uniform_Diamonds",
+			"816th_Vest_ARC_Diamonds",
+			"ItemMap",
+			"SWLB_comlink",
+			"ItemCompass",
+			"TFAR_microdagr"
+		};
+	};
+	class 816th_ARC_Trooper_Hearts: SWLB_clone_arc_base_P2
+	{
+		dlc="816th_EU";
+		author="Aussie";
+		scope=2;
+		scopeCurator=2;
+		displayName="816th ARC Trooper Hearts";
+		faction="816th_EU_Faction";
+		backpack="";
+		editorSubcategory="816th_ARC";
+		uniformclass="816th_ARC_Trooper_Hearts";
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_Aux\data\816th_uniform_arc_hearts_upper.paa",
+			"816thEU_Aux\data\816th_uniform_arc_hearts_lower.paa"
+		};
+		linkedItems[]=
+		{
+			"816th_ARC_Helmet_Hearts",
+			"816th_ARC_Uniform_Hearts",
+			"816th_Vest_ARC_Hearts",
+			"ItemMap",
+			"SWLB_comlink",
+			"ItemCompass",
+			"TFAR_microdagr"
+		};
+		respawnLinkedItems[]=
+		{
+			"816th_ARC_Helmet_Hearts",
+			"816th_ARC_Uniform_Hearts",
+			"816th_Vest_ARC_Hearts",
+			"ItemMap",
+			"SWLB_comlink",
+			"ItemCompass",
+			"TFAR_microdagr"
+		};
+	};
 	class 816th_ARF_Trooper_1: SWLB_clone_sniper_base_P2
 	{
 		dlc="816th_EU";
@@ -1535,43 +1831,6 @@ class CfgVehicles
 			"TFAR_microdagr"
 		};
 	};
-	class 816th_Custom_Trooper_Aussie: SWLB_clone_base_P2
-	{
-		dlc="816th_EU";
-		author="Aussie";
-		scope=2;
-		scopeCurator=2;
-		displayName="816th Custom Trooper (Aussie)";
-		faction="816th_EU_Faction";
-		backpack="";
-		editorSubcategory="816th_ARC";
-		uniformclass="816th_Custom_Trooper_Aussie";
-		hiddenSelectionsTextures[]=
-		{
-			"816thEU_Aux\data\816th_Uniform_Custom_Aussie_Upper.paa",
-			"816thEU_Aux\data\816th_Uniform_Custom_Aussie_Lower.paa"
-		};
-		linkedItems[]=
-		{
-			"816th_Custom_Helmet_Aussie",
-			"816th_Custom_Uniform_Aussie",
-			"816th_Vest_ARC_Spades",
-			"ItemMap",
-			"SWLB_comlink",
-			"ItemCompass",
-			"TFAR_microdagr"
-		};
-		respawnLinkedItems[]=
-		{
-			"816th_Custom_Helmet_Aussie",
-			"816th_Custom_Uniform_Aussie",
-			"816th_Vest_ARC_Spades",
-			"ItemMap",
-			"SWLB_comlink",
-			"ItemCompass",
-			"TFAR_microdagr"
-		};
-	};
 	class ls_blueforBackpack_base: B_Kitbag_rgr
 	{
 		author="Legion Studios";
@@ -1597,7 +1856,7 @@ class CfgVehicles
 	class 816thEU_AUX_Backpack_1: ls_blueforBackpack_base
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayname="816th Backpack 1";
@@ -1618,12 +1877,12 @@ class CfgVehicles
 	class 816thEU_AUX_Backpack_Heavy: ls_blueforBackpack_base
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayname="816th Heavy Backpack";
 		model="ls_equipment_bluefor\backpack\gar\backpack\ls_gar_rocket_backpack.p3d";
-		maximumload=2000;
+		maximumload=2500;
 		picture="\SWLB_equipment\backpacks\data\ui\icon_SWLB_clone_backpack_ca.paa";
 		hiddenselections[]=
 		{
@@ -1645,13 +1904,13 @@ class CfgVehicles
 	class 816thEU_AUX_Backpack_LongRange: ls_blueforRadioPack_base
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayname="816th LR Backpack";
 		model="ls_equipment_bluefor\backpack\gar\mediumBackpack\ls_gar_mediumRadio_backpack.p3d";
 		picture="\SWLB_equipment\backpacks\data\ui\icon_SWLB_clone_backpack_ca.paa";
-		maximumload=2000;
+		maximumload=2500;
 		hiddenselections[]=
 		{
 			"backpack",
@@ -1670,12 +1929,12 @@ class CfgVehicles
 	class 816thEU_AUX_Backpack_2: ls_blueforBackpack_base
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayname="816th Backpack 2";
 		model="ls_equipment_bluefor\backpack\gar\heavyBackpack\ls_gar_heavy_backpack.p3d";
-		maximumload=2000;
+		maximumload=2250;
 		picture="\SWLB_equipment\backpacks\data\ui\icon_SWLB_clone_backpack_ca.paa";
 		hiddenselections[]=
 		{
@@ -1695,12 +1954,12 @@ class CfgVehicles
 	class 816thEU_AUX_Backpack_MED: ls_blueforBackpack_base
 	{
 		dlc="816th_EU";
-		author="Blue";
+		author="Aussie";
 		scope=2;
 		scopeArsenal=2;
 		displayname="816th Medic Backpack";
 		model="ls_equipment_bluefor\backpack\gar\backpack\ls_gar_medic_backpack.p3d";
-		maximumload=2000;
+		maximumload=3000;
 		picture="\SWLB_equipment\backpacks\data\ui\icon_SWLB_clone_backpack_ca.paa";
 		hiddenselections[]=
 		{
@@ -1733,7 +1992,7 @@ class CfgVehicles
 		tf_range=25000;
 		tf_subtype="digital_lr";
 		model="SWLB_equipment\backpacks\swlb_clone_arc_backpack.p3d";
-		maximumload=2000;
+		maximumload=2500;
 		picture="\SWLB_equipment\backpacks\data\ui\icon_SWLB_clone_backpack_ca.paa";
 	};
 };
