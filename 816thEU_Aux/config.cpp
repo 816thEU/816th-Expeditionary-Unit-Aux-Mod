@@ -519,7 +519,7 @@ class CfgWeapons
 		displayName="816th Custom Helmet (Mako)";
 		hiddenSelectionsTextures[]=
 		{
-			"816thEU_Aux\data\816th_Helmet_Custom_Mako.paa"
+			"816thEU_Aux\data\816th_Helmet_Custom_Mako.paa",
 			"816thEU_Aux\data\816th_Helmet_Custom_visor_Mako.paa"
 		};
 	};
