@@ -47,6 +47,7 @@ class CfgPatches
 			"816th_Helmet_Pilot_1",
 			"816th_Custom_Helmet_Mako",
 			"816th_Custom_Helmet_Photon",
+			"816th_Custom_Helmet_lou",
 			"816th_RFL_Uniform_1",
 			"816th_Infantry_Uniform_1",
 			"816th_Infantry_Uniform_2",
@@ -607,6 +608,26 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Custom_Thastian.paa",
 			"ls_armor_bluefor\helmet\gar\phase2\data\visor_co.paa"
 		}; 
+	};
+	class 816th_Custom_Helmet_Diplo: lsd_gar_arc_helmet
+	{
+		dlc="816th_EU";
+		author="Taun";
+		scope=2;
+		scopeArsenal=2;
+		displayName="816th Custom Helmet (Diplo)";
+		model="lsd_armor_bluefor\helmet\gar\arc\lsd_gar_arc_helmet";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"visor",
+			"illum"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"816thEU_Aux\data\816th_helmet_custom_diplo.paa",
+			"lsd_armor_bluefor\helmet\gar\arc\data\visor_co.paa"
+		};
 	};
 	class 816th_RFL_Uniform_1: SWLB_clone_uniform
 	{
