@@ -361,8 +361,7 @@ class CfgWeapons
 		hiddenSelections[]=
 		{
 			"camo1",
-			"visor",
-			"illum"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -553,7 +552,6 @@ class CfgWeapons
 		{
 			"camo1",
 			"visor",
-			"illum"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -597,6 +595,19 @@ class CfgWeapons
 			"816thEU_Aux\data\816th_Helmet_Custom_Aussie.paa" 
 		}; 
 	}; 
+	class 816th_Custom_Helmet_Thastian: ls_gar_phase2_helmet
+	{ 
+		dlc="816th_EU"; 
+		author="Aussie"; 
+		scope=2; 
+		scopeArsenal=2; 
+		displayName="816th Custom Helmet (Thastian)"; 
+		hiddenSelectionsTextures[]= 
+		{ 
+			"816thEU_Aux\data\816th_Helmet_Custom_Thastian.paa",
+			"ls_armor_bluefor\helmet\gar\phase2\data\visor_co.paa"
+		}; 
+	};
 	class 816th_RFL_Uniform_1: SWLB_clone_uniform
 	{
 		dlc="816th_EU";
